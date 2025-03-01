@@ -1,12 +1,12 @@
-"use client"
-import Image from "next/image";
+import React from "react";
 import HomeSection from "./components/HomeSection";
 import AboutSection from "./components/AboutSection";
 
 import TeamSection from "./components/TeamSection";
 import Footer from "./components/Footer";
-import ServicesSection from "./components/ServicesSection";
+
 import ClientSection from "./components/ClientSection";
+import ServicesSection from "./components/ServicesSection";
 
 export default function Home() {
   return (

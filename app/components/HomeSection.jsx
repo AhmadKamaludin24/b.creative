@@ -41,7 +41,7 @@ const HomeSection = () => {
                 <a href='mailto:bhugatscreative@gmail.com' className='p-3 rounded-2xl border border-gray-200 text-black bg-gray-200'>Lets discus</a>
               </div>
               <div className='flex pt-5'>
-              <AnimatedTooltip items={team}/>
+              <AnimatedTooltip items={team} />
               </div>
 
             </div>

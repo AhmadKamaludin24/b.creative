@@ -124,49 +124,49 @@ export const products = [
         id:1 ,
         name: 'Zam Zami Dawud Yusuf',
         designation: 'CO-FOUNDER',
-        image: "https://raw.githubusercontent.com/AhmadKamaludin24/team/refs/heads/main/Jambrong%20baru%20BW%20(1)%20copy_3_11zon.png?token=GHSAT0AAAAAAC5R24KTEOH4QEVHPEZUSIEMZ4XNPDQ",
+        image: "/team/Jambrong baru BW (1) copy_3_11zon.png",
     
       },
       {
         id:2 ,
         name: 'Haspriya Yoga',
         designation: 'CO-FOUNDER',
-        image: "https://raw.githubusercontent.com/AhmadKamaludin24/team/refs/heads/main/Yoga.png?token=GHSAT0AAAAAAC5R24KSOJQ3OEU3REHVSQEMZ4XORHQ",
+        image: "/team/Yoga.png",
     
       },
       {
         id:3 ,
         name: 'Puji Afrijal',
         designation: 'CO-FOUNDER',
-        image: "https://raw.githubusercontent.com/AhmadKamaludin24/team/refs/heads/main/Puji%20copy%20(1).png?token=GHSAT0AAAAAAC5R24KTAIOAEEKEYZZQLTVQZ4XOSYA",
+        image: "/team/Puji copy (1).png",
     
       },
       {
         id:4 ,
         name: 'Ilham Yafi',
         designation: 'Chief Finance Officer',
-        image: "https://raw.githubusercontent.com/AhmadKamaludin24/team/refs/heads/main/Yafi_1_11zon.png?token=GHSAT0AAAAAAC5R24KSX2L7TTRESZQEVCIEZ4XOTJQ",
+        image: "/team/Yafi_1_11zon.png",
     
       },
       {
         id:5 ,
         name: 'Ahmad Kamaludin',
         designation: 'Web Developer',
-        image: "https://raw.githubusercontent.com/AhmadKamaludin24/team/refs/heads/main/Kamal_4_11zon.png?token=GHSAT0AAAAAAC5R24KS4JJ4HBFLX3LAGB6SZ4XOPJQ",
+        image: "/team/Kamal_4_11zon.png",
     
       },
       {
         id:6 ,
         name: 'Luthfi Fattahh',
         designation: 'Photo and Video Manager',
-        image: "https://raw.githubusercontent.com/AhmadKamaludin24/team/refs/heads/main/Luthfi_2_11zon.png?token=GHSAT0AAAAAAC5R24KTTNJD5JEG2MFHEA64Z4XOT3A",
+        image: "/team/Luthfi_2_11zon.png",
     
       },
       {
         id:7 ,
         name: 'Dicky Gunardi',
         designation: 'Production Support',
-        image: "https://raw.githubusercontent.com/AhmadKamaludin24/team/refs/heads/main/Dicky%20Gunardi.png?token=GHSAT0AAAAAAC5R24KSHB6JKWYIRACJKNNAZ4XOUPQ",
+        image: "/team/Dicky Gunardi.png",
     
       },
     ];

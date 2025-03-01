@@ -20,13 +20,15 @@ const Navbar = () => {
       const sectionTop = section.getBoundingClientRect().top + window.scrollY
       window.scrollTo({ top: sectionTop - navbarHeight, behavior: "smooth" })
       setIsOpen(false) // Tutup navbar setelah klik
+    } else {
+      window.location.href = `/#${id}`;
     }
   }
 
   return (
     <>
       {/* Navbar */}
-      <div className="fixed top-0 left-0 w-full backdrop-blur-3xl bg-black z-[100] md:py-2 py-1 border-b-2 border-gray-950 lg:px-52 px-6 flex items-center justify-between">
+      <div className="fixed top-0 left-0 w-full backdrop-blur-3xl bg-black z-[90] md:py-2 py-1 border-b-2 border-gray-950 lg:px-52 px-6 flex items-center justify-between">
         
         {/* Logo */}
         <div className='flex items-center gap-2'>
