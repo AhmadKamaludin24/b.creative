@@ -62,7 +62,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className='md:hidden flex flex-col gap-4 absolute top-0 left-0 w-full h-64 bg-black border-b-2 backdrop-blur-xl z-[100] py-20 px-6 justify-center items-center rounded-b-[40px]'
+            className='md:hidden flex flex-col gap-4 absolute top-0 left-0 w-full h-72 bg-black border-b-2 backdrop-blur-xl z-[100] py-20 px-6 justify-center items-center rounded-b-[40px]'
           >
             {navItems.map((item) => (
               <motion.li

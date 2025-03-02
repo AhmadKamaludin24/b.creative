@@ -17,7 +17,7 @@ const page = () => {
         
         <div className="max-w-7xl w-full relative min-h-screen">
           <Spotlight/>
-            <ProductList category={category} className="pt-7"/>
+            <ProductList category={category} className="py-9"/>
             <Navbar/>
         </div>
    

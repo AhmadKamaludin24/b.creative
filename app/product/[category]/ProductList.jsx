@@ -334,15 +334,15 @@ const ProductList = ({category}) => {
     <>
    
     <h1 className="text-center pt-32 text-4xl font-bold text-white">{products.length > 0 ? products[0].title : "No Products Available"}</h1>
-    <div className="mt-24 p-3 grid grid-cols-1 grid-rows-6 lg:grid-cols-6 lg:grid-rows-3 gap-10 ">
+    <div className="mt-24 p-3 grid grid-cols-1 grid-rows-6 lg:grid-cols-6 lg:grid-rows-3 gap-5 ">
       
     {products.length > 0 ? (
       products.map((product) => (
-        <div key={product.id} className={`relative overflow-hidden rounded-2xl col-span-1 row-span-1 p-7 lg:p-1 ${product.className}`}>
+        <div key={product.id} className={`relative overflow-hidden rounded-2xl col-span-1 row-span-1 p-2 lg:p-1 ${product.className}`}>
           <img src={product.thumbnail} alt={product.title} className="w-full h-full object-cover rounded-xl" />
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity">
                 <button
-                  className="bg-white text-black px-6 py-4 rounded-lg font-semibold"
+                  className="bg-white text-black px-4 py-2 rounded-lg font-semibold"
                   onClick={() => setSelectedImage(product.thumbnail)}
                 >
                   <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
