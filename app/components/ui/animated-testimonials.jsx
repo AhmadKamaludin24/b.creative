@@ -74,7 +74,13 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
             </AnimatePresence>
           </div>
         </div>
+
+
+      
+
+
         <div className="flex justify-between flex-col py-2">
+          
           <motion.div
             key={active}
             initial={{ y: 20, opacity: 0 }}
@@ -85,9 +91,26 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
             <h3 className="text-2xl font-bold dark:text-white">
               {testimonials[active].name}
             </h3>
+            
             <p className="text-sm text-gray-500 dark:text-neutral-500">
               {testimonials[active].designation}
             </p>
+
+            <div className="flex gap-4 mt-7 md:pt-0">
+            <button
+              onClick={handlePrev}
+              className="h-7 w-7 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center group/button"
+            >
+              <IconArrowLeft className="h-5 w-5 text-black dark:text-neutral-400 group-hover/button:rotate-12 transition-transform duration-300" />
+            </button>
+            <button
+              onClick={handleNext}
+              className="h-7 w-7 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center group/button"
+            >
+              <IconArrowRight className="h-5 w-5 text-black dark:text-neutral-400 group-hover/button:-rotate-12 transition-transform duration-300" />
+            </button>
+          </div>
+
             <motion.p className="text-[0.8rem] lg:text-lg pb-6 text-gray-500 mt-8 dark:text-neutral-300">
               {(testimonials[active]?.quote || "").split(" ").map((word, index) => (
                 <motion.span
@@ -102,20 +125,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
               ))}
             </motion.p>
           </motion.div>
-          <div className="flex gap-4 pt-1 md:pt-0">
-            <button
-              onClick={handlePrev}
-              className="h-7 w-7 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center group/button"
-            >
-              <IconArrowLeft className="h-5 w-5 text-black dark:text-neutral-400 group-hover/button:rotate-12 transition-transform duration-300" />
-            </button>
-            <button
-              onClick={handleNext}
-              className="h-7 w-7 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center group/button"
-            >
-              <IconArrowRight className="h-5 w-5 text-black dark:text-neutral-400 group-hover/button:-rotate-12 transition-transform duration-300" />
-            </button>
-          </div>
+          
         </div>
       </div>
     </div>

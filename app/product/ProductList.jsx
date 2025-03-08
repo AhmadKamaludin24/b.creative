@@ -8,6 +8,15 @@ const ProductList = ({category}) => {
     const [products, setProducts] = useState([]);
     const [selectedImage, setSelectedImage] = useState(null);
     
+    const handleClick = (product) => {
+        if (category === 'comercial-video' && product.videoUrl) {
+            window.location.href = product.videoUrl;
+            setSelectedImage(null);
+            return;
+        }
+        setSelectedImage(product.thumbnail);
+    }
+
     useEffect(() => {
       const allProducts = [
         {
@@ -322,11 +331,46 @@ const ProductList = ({category}) => {
               thumbnail: "https://res.cloudinary.com/dkfaedt7r/image/upload/v1735976162/bughats-assets/img/service/event/txabeqqookhf4bx1s41o.jpg",
           },
       ]
+  },
+  {
+    category: 'comercial-video',
+    title: 'Commercial Video & Company Profile',
+    data: [
+        {
+            id: 1,
+            title: "Commercial Video & Company Profile",
+            className: "md:col-span-2",
+            thumbnail: "https://res.cloudinary.com/dkfaedt7r/image/upload/v1736002017/bughats-assets/img/service/videocomercil/njkao7tcdyyhaggdcljg.jpg",
+            videoUrl: "https://youtu.be/7ckxwbSfM1o",
+        },
+        {
+            id: 2,
+            title: "Commercial Video & Company Profile",    
+            className: "md:col-span-2",
+            thumbnail: "https://res.cloudinary.com/dkfaedt7r/image/upload/v1736002017/bughats-assets/img/service/videocomercil/rczdz36rkqgowei2vv4g.jpg",
+            videoUrl: "https://youtu.be/yHYMcVVhFFI",
+        },
+        {
+            id: 3,
+            title: "Commercial Video & Company Profile",
+            className: "md:col-span-2",
+            thumbnail: "https://res.cloudinary.com/dkfaedt7r/image/upload/v1736002064/bughats-assets/img/service/videocomercil/mwjteelzd28porln9lse.jpg",
+            videoUrl: "https://youtu.be/vmKe2l5uq80?si=G76NTGEpW9XIeVzm",
+        },
+        {
+            id: 4,
+            title: "Commercial Video & Company Profile",
+            className: "md:col-span-2",
+            thumbnail: "https://res.cloudinary.com/dkfaedt7r/image/upload/v1736002777/bughats-assets/img/service/videocomercil/j7citqnevsgssrturnao.jpg",
+            videoUrl: "https://youtu.be/Q9ocEkmlZ8Y",
+        },
+    ]
   }
     ];
     
         const filteredCategory = allProducts.find((item) => item.category === category);
         setProducts(filteredCategory ? filteredCategory.data : []);
+        console.log(filteredCategory);
     }, [category])
     
     
@@ -343,7 +387,7 @@ const ProductList = ({category}) => {
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity">
                 <button
                   className="bg-white text-black px-4 py-2 rounded-lg font-semibold"
-                  onClick={() => setSelectedImage(product.thumbnail)}
+                  onClick={() => handleClick(product)}
                 >
                   <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 4H4m0 0v4m0-4 5 5m7-5h4m0 0v4m0-4-5 5M8 20H4m0 0v-4m0 4 5-5m7 5h4m0 0v-4m0 4-5-5"/>
