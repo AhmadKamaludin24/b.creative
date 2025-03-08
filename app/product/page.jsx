@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import Navbar from "@/app/components/ui/Navbar";
@@ -9,19 +9,22 @@ import Footer from "@/app/components/Footer";
 
 const ProductList = dynamic(() => import("./ProductList"), { suspense: true });
 
-const Page = () => {
+const PageContent = () => {
   const params = useSearchParams();
   const router = useRouter();
   const category = params.get("category");
 
+  const [isRedirecting, setIsRedirecting] = useState(false);
+
   useEffect(() => {
     if (!category) {
-      router.replace("/"); // Redirect ke homepage atau halaman lain
+      setIsRedirecting(true);
+      router.replace("/"); // Redirect ke homepage jika category tidak ada
     }
   }, [category, router]);
 
-  if (!category) {
-    return null; // Hindari render halaman sebelum redirect
+  if (isRedirecting) {
+    return <p className="text-white text-center mt-10">Redirecting...</p>;
   }
 
   return (
@@ -35,6 +38,14 @@ const Page = () => {
         <Footer />
       </div>
     </div>
+  );
+};
+
+const Page = () => {
+  return (
+    <Suspense fallback={<p className="text-white text-center mt-10">Loading...</p>}>
+      <PageContent />
+    </Suspense>
   );
 };
 
