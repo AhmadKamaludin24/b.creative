@@ -88,11 +88,11 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
             exit={{ y: -20, opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
           >
-            <h3 className="text-2xl font-bold dark:text-white">
+            <h3 className="text-2xl font-bold text-white">
               {testimonials[active].name}
             </h3>
             
-            <p className="text-sm text-gray-500 dark:text-neutral-500">
+            <p className="text-sm text-gray-500 ">
               {testimonials[active].designation}
             </p>
 
@@ -111,7 +111,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
             </button>
           </div>
 
-            <motion.p className="text-[0.8rem] lg:text-lg pb-6 text-gray-500 mt-8 dark:text-neutral-300">
+            <motion.p className="text-[0.8rem] lg:text-lg pb-6 text-gray-500 mt-8 ">
               {(testimonials[active]?.quote || "").split(" ").map((word, index) => (
                 <motion.span
                   key={index}

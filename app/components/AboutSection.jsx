@@ -18,8 +18,8 @@ const AboutSection = () => {
     </div>
 
     {/* Konten */}
-    <div className=' flex flex-col gap-4  w-full text-center lg:text-left'>
-      <h1 className='lg:text-5xl text-3xl font-bold'>About Us</h1>
+    <div className=' flex flex-col gap-4  w-full lg:text-left '>
+      <h1 className='lg:text-5xl text-white text-3xl font-bold'>About Us</h1>
       <p className='text-sm lg:text-lg text-gray-500'>
         Bughats Creative is a creative and innovative company specializing in 3D modeling, visual production, 
         digital marketing, social media management, web development, and event management. Founded in 2020, 

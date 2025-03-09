@@ -7,17 +7,22 @@ export const navItems = [
         link: 'home'
     },
     {
-        id: 2,
+      id: 2,
+      name: 'Headline',
+      link: '/headline'
+    },
+    {
+        id: 3,
         name: 'About',
         link: 'about'
     },
     {
-        id: 3,
+        id: 4,
         name: 'Services',
         link: 'services'
     },
     {
-      id: 4,
+      id: 5,
       name: 'Team',
       link: 'team'
   },

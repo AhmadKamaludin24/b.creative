@@ -25,7 +25,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-black text-white py-8 px-4 md:px-12">
+    <footer className="bg-black text-white py-8 px-4 md:px-12 absolute bottom-0 w-full">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Logo & Copyright */}
         <div className="text-center md:text-left">
@@ -36,9 +36,9 @@ export default function Footer() {
         {/* Navigation Links */}
         <nav className="flex space-x-6 mt-4 md:mt-0">
           {navItems.map((item) => (
-            <li key={item.id} className='text-white hover:text-gray-400 cursor-pointer'>
+            <div key={item.id} className='text-white hover:text-gray-400 cursor-pointer'>
               <button onClick={() => handleScroll(item.link)}>{item.name}</button>
-            </li>
+            </div>
           ))}
         </nav>
 
