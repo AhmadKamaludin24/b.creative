@@ -12,7 +12,7 @@ const ServicesSection = () => {
   const cards = [
     {
       id: 1,
-      title: "3D Arcitectural",
+      title: "3D Architectural",
       className: "col-span-3 row-span-3",
       thumbnail: "https://res.cloudinary.com/dkfaedt7r/image/upload/v1735972493/bughats-assets/img/service/3darsitektur/clfoq9ustpv8hkqvbdmo.png",
       category: "3d-architectural",
